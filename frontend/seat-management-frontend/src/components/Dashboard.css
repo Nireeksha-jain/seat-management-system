@@ -1,0 +1,275 @@
+/* Basic Page Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f2f2f2, #e6e6e6);
+    color: #333;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Styling */
+input[type="date"] {
+    display: block;
+    margin: 40px auto 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="date"]:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Zone Titles Styling */
+.zone-title {
+    font-size: 1.75rem;
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #4CAF50;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Seat Layout Styling */
+.seat-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* General Seat/Workstation Styles */
+.seat, .computer {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-weight: bold;
+}
+
+.seat.booked, .computer.booked {
+    background-color: #FF4C4C;
+    color: white;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.seat.available, .computer.available {
+    background-color: #3F51B5;
+    color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effects */
+.seat.available:hover, .computer.available:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    background-color: #4CAF50;
+    color: white;
+}
+
+.seat span, .computer span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Icon Styling for Computers */
+.computer span {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.computer {
+    background-color: #4CAF50;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #388E3C;
+}
+
+.computer .fa-laptop {
+    font-size: 36px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.computer:hover .fa-laptop {
+    color: #f1f1f1;
+}
+
+/* Round Table Styling */
+.round-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 20px;
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, #FFB74D, #FF9800);
+    border-radius: 50%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.round-table .seat {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.round-table .seat:nth-child(1) {
+    top: 10%;
+    left: 50%;
+}
+
+.round-table .seat:nth-child(2) {
+    top: 50%;
+    left: 90%;
+}
+
+.round-table .seat:nth-child(3) {
+    top: 90%;
+    left: 50%;
+}
+
+.round-table .seat:nth-child(4) {
+    top: 50%;
+    left: 10%;
+}
+
+.round-table .seat:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Group Zone (Library Zone) */
+.library-zone {
+    margin: 20px 0;
+    text-align: center;
+    background-color: #E1F5FE;
+    border: 2px solid #81D4FA;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.library-zone:hover {
+    background-color: #81D4FA;
+}
+
+/* Innovation Zone Styling (New Zone) */
+.innovation-zone {
+    margin: 20px 0;
+    padding: 25px;
+    background: linear-gradient(135deg, #8BC34A, #388E3C);
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.innovation-zone .zone-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.innovation-zone .seat {
+    background-color: #ffffff;
+    color: #388E3C;
+    font-weight: normal;
+    padding: 5px;
+}
+
+/* Creative Zone Styling */
+.creative-zone {
+    margin: 20px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #FF4081, #D500F9);
+    color: white;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.creative-zone .zone-title {
+    color: #fff;
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.creative-zone .seat {
+    background-color: #fff;
+    color: #D500F9;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Relaxation Zone Styling */
+.relaxation-zone {
+    margin: 20px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #00BCD4, #009688);
+    color: white;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.relaxation-zone .zone-title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.relaxation-zone .seat {
+    background-color: #ffffff;
+    color: #009688;
+    font-weight: normal;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.relaxation-zone .seat:hover {
+    transform: translateY(-3px);
+    background-color: #00BCD4;
+    color: white;
+}

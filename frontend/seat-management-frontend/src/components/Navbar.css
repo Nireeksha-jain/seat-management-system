@@ -1,0 +1,88 @@
+/* Navbar container styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #4caf50, #81c784);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Logo on the left */
+.navbar-left .navbar-logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-left .navbar-logo:hover {
+  transform: scale(1.1);
+}
+
+/* User and buttons on the right */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* User greeting */
+.navbar-user {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile and logout buttons */
+.navbar-btn {
+  background-color: #fff;
+  color: #4caf50;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-btn:hover {
+  background-color: #4caf50;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile link (wraps the profile button) */
+.profile-link {
+  text-decoration: none;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .navbar-left, .navbar-right {
+    width: 100%;
+  }
+
+  .navbar-user {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 40px; /* Add this to push it slightly lower */
+    position: relative;
+    top: 10px; /* Adjusts its position */
+  }
+}

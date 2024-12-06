@@ -1,0 +1,133 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Booking List container */
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading */
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Booking item styling */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  li:hover {
+    background-color: #e0f7fa;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Booking details */
+  li p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+  }
+  
+  /* Button styling (for Cancel button in red) */
+  button {
+    background-color: #ff4444; /* Red color */
+    color:  #ff4444;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: none; /* Disable hover transition */
+  }
+  
+  /* Remove hover effect on button */
+  button:hover {
+    background-color: #ff4444; /* Keep the same red color */
+    transform: none;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* No bookings found message */
+  .no-bookings {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+  }
+  
+  /* For mobile responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+      margin: 10px;
+    }
+  
+    li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  
+  /* Styling for upcoming and past bookings */
+  .upcoming-booking {
+    background-color: #e0f7fa; /* Light blue background for upcoming bookings */
+  }
+  
+  .past-booking {
+    background-color: #f8d7da; /* Light red/pink background for past bookings */
+  }
+  
+  .clicked-booking {
+    background-color: #e3f2fd; /* Lighter blue for clicked (selected) booking */
+    border: 1px solid #2196f3; /* Highlight the selected booking */
+  }
+  
+  /* BookingList.css */
+.cancel-button {
+  background-color: #FF4C4C;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+  background-color: #FF0000;
+}
